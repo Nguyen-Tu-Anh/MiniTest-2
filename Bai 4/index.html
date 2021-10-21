@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = +prompt('Hien thi so nguyen to nho hon');
+    let sum = 0;
+    check_snt(numbers);
+
+    function check_snt(num) {
+        for (let i = 0; i < num; i++) {
+            if (i < 2) {
+                continue
+            } else {
+                let check = true;
+                for (let j = 2; j <= Math.sqrt(i); j++) {
+                    if (i % j === 0) {
+                        check = false;
+                        break;
+                    }
+                }
+                if (check) {
+                    sum = sum + i;
+                }
+            }
+        }
+        document.write('Tổng các snt là:' + ' ' + sum)
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let numberA = +prompt('Mời nhập số a');
+  let numbers = +prompt('Nhập số phần tử trong mảng')
+  let arr = [];
+  for (let i = 0; i < numbers; i++) {
+      let number1 = +prompt('nhập phần tử')
+      arr[i] = number1;
+      document.write(arr[i] + ' ')
+  }
+  document.write('<br>')
+  demPhanTu();
+  function demPhanTu() {
+      let count = 0;
+      for (let i = 0; i < arr.length; i++) {
+          if (arr[i] === numberA) {
+              count +=1
+          }
+      }
+      document.write('Mảng có'+ ' ' + count + ' phần tử ' + ' ' + numberA )
+  }
+</script>
+</body>
+</html>
